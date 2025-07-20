@@ -2,72 +2,74 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: #e0e0e0;
 }
 
 body {
+    background: #0a0a1a;
     line-height: 1.6;
-    color: #333;
+    overflow-x: hidden;
 }
 
 /* Navbar */
 nav {
-    background: #2c3e50;
-    color: #fff;
-    padding: 1rem;
+    background: rgba(10, 10, 26, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     width: 100%;
-    top: 0;
+    z-index: 1000;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #00aaff;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-}
-
-.nav-links li {
-    margin-left: 2rem;
+    gap: 2rem;
 }
 
 .nav-links a {
-    color: #fff;
+    color: #e0e0e0;
     text-decoration: none;
-    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #3498db;
+    color: #00aaff;
 }
 
 .hamburger {
     display: none;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
+    color: #e0e0e0;
 }
 
 /* Hero Section */
 #home {
-    background: #3498db;
-    color: #fff;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 2rem;
+    background: linear-gradient(135deg, #0a0a1a, #1a1a3a);
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 600;
     margin-bottom: 1rem;
+    color: #00aaff;
 }
 
 .hero p {
@@ -76,50 +78,92 @@ nav {
 }
 
 .btn {
-    background: #2c3e50;
+    background: #00aaff;
     color: #fff;
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
-    background: #34495e;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 170, 255, 0.4);
 }
 
-/* About, Projects, Contact Sections */
-section {
+/* Sections */
+.section {
     padding: 5rem 2rem;
-    text-align: center;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-/* Projects Grid */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #00aaff;
+}
+
+/* About Section */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.skills span {
+    background: #1a1a3a;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.skills span:hover {
+    transform: scale(1.1);
+}
+
+/* Projects Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
 .project-card {
-    background: #f9f9f9;
-    padding: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #1a1a3a;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 170, 255, 0.2);
 }
 
 .project-card h3 {
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-/* Contact Form */
+.project-card p {
+    font-size: 1rem;
+    color: #b0b0b0;
+}
+
+/* Contact Section */
 #contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -130,33 +174,56 @@ h2 {
 
 #contact-form input,
 #contact-form textarea {
+    background: #1a1a3a;
+    border: 1px solid #00aaff;
     padding: 0.8rem;
-    border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
+    color: #e0e0e0;
 }
 
 #contact-form textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 120px;
 }
 
 #contact-form button {
-    background: #3498db;
+    background: #00aaff;
     border: none;
+    padding: 0.8rem;
+    border-radius: 5px;
     cursor: pointer;
+    font-weight: 500;
 }
 
 #contact-form button:hover {
-    background: #2980b9;
+    background: #0088cc;
 }
 
 /* Footer */
 footer {
-    background: #2c3e50;
-    color: #fff;
+    background: #1a1a3a;
     text-align: center;
     padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive Design */
@@ -167,17 +234,14 @@ footer {
         position: absolute;
         top: 60px;
         left: 0;
-        background: #2c3e50;
+        background: rgba(10, 10, 26, 0.9);
         width: 100%;
         padding: 1rem;
+        text-align: center;
     }
 
     .nav-links.active {
         display: flex;
-    }
-
-    .nav-links li {
-        margin: 0.5rem 0;
     }
 
     .hamburger {
@@ -185,10 +249,14 @@ footer {
     }
 
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .hero p {
         font-size: 1rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 }
