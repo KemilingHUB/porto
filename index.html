@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Alvan Faith Irawan</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar -->
     <nav>
-        <div class="logo">Alvan Faith Irawan</div>
+        <div class="logo">Alvan Faith</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -20,55 +21,61 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home">
+    <section id="home" class="section">
         <div class="hero">
-            <h1>Selamat Datang di Portofolio Saya</h1>
-            <p>Halo, saya Alvan Faith Irawan, seorang pelajar SMK jurusan RPL yang bersemangat dalam web development.</p>
-            <a href="#projects" class="btn">Lihat Proyek Saya</a>
+            <h1 class="fade-in">Alvan Faith Irawan</h1>
+            <p class="fade-in">Pelajar SMK RPL | Pengembang Web yang Bersemangat</p>
+            <a href="#projects" class="btn fade-in">Jelajahi Proyek Saya</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about">
-        <h2>Tentang Saya</h2>
-        <p>Saya Alvan Faith Irawan, seorang siswa SMK jurusan Rekayasa Perangkat Lunak. Saya memiliki minat dalam pengembangan website dan aplikasi menggunakan HTML, CSS, dan JavaScript. Saya suka belajar teknologi baru dan menerapkannya dalam proyek-proyek kreatif.</p>
-        <p><strong>Keterampilan:</strong> HTML, CSS, JavaScript, Desain Responsif, Manajemen Database Dasar</p>
+    <section id="about" class="section">
+        <h2 class="fade-in">Tentang Saya</h2>
+        <div class="about-content">
+            <p class="fade-in">Saya Alvan Faith Irawan, seorang siswa SMK jurusan Rekayasa Perangkat Lunak. Saya bersemangat membangun website modern dan aplikasi inovatif menggunakan teknologi seperti HTML, CSS, dan JavaScript.</p>
+            <div class="skills fade-in">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Desain Responsif</span>
+            </div>
+        </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-        <h2>Proyek Saya</h2>
+    <section id="projects" class="section">
+        <h2 class="fade-in">Proyek Saya</h2>
         <div class="project-grid">
-            <div class="project-card">
-                <h3>Website Profil Sekolah</h3>
-                <p>Membuat website untuk SMK dengan informasi profil, jadwal, dan galeri kegiatan menggunakan HTML dan CSS.</p>
+            <div class="project-card fade-in">
+                <h3>Website Sekolah</h3>
+                <p>Website profil SMK dengan fitur PPDB dan galeri kegiatan, dibuat dengan HTML dan CSS.</p>
             </div>
-            <div class="project-card">
-                <h3>Toko Online Sederhana</h3>
-                <p>Mengembangkan website toko online dengan fitur daftar produk dan keranjang belanja menggunakan JavaScript dan MySQL.</p>
+            <div class="project-card fade-in">
+                <h3>Toko Online</h3>
+                <p>Toko online sederhana dengan daftar produk dan keranjang belanja menggunakan JavaScript.</p>
             </div>
-            <div class="project-card">
-                <h3>Website Portofolio Pribadi</h3>
-                <p>Website ini! Dibuat untuk menampilkan keterampilan dan proyek saya menggunakan HTML, CSS, dan JavaScript.</p>
+            <div class="project-card fade-in">
+                <h3>Portofolio Ini</h3>
+                <p>Website portofolio pribadi dengan desain modern dan animasi interaktif.</p>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Kontak Saya</h2>
-        <p>Hubungi saya untuk kolaborasi atau pertanyaan lebih lanjut!</p>
-        <form id="contact-form">
+    <section id="contact" class="section">
+        <h2 class="fade-in">Hubungi Saya</h2>
+        <form id="contact-form" class="fade-in">
             <input type="text" placeholder="Nama" required>
             <input type="email" placeholder="Email" required>
-            <textarea placeholder="Pesan" required></textarea>
+            <textarea placeholder="Pesan Anda" required></textarea>
             <button type="submit" class="btn">Kirim Pesan</button>
         </form>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Alvan Faith Irawan. All rights reserved.</p>
+        <p>© 2025 Alvan Faith Irawan. Dibuat dengan ✨</p>
     </footer>
 
     <script src="script.js"></script>
