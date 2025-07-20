@@ -13,3 +13,19 @@ form.addEventListener('submit', (e) => {
     alert('Pesan telah dikirim! (Fitur ini hanya simulasi)');
     form.reset();
 });
+
+// Scroll animation trigger
+const fadeInElements = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.animationDelay = `${entry.target.dataset.delay || 0}s`;
+            entry.target.classList.add('fade-in-active');
+        }
+    });
+}, { threshold: 0.2 });
+
+fadeInElements.forEach((el, index) => {
+    el.dataset.delay = index * 0.2;
+    observer.observe(el);
+});
